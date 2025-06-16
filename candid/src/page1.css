@@ -1,0 +1,14 @@
+.d1,.d3,.d2{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+}
+
+.d2,.d3{
+        padding:5px;
+        align-items: center;
+}
+
+li{
+color: #F5F5F5;
+}

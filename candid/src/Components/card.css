@@ -1,0 +1,111 @@
+/* card.css */
+.d {
+  background: linear-gradient(145deg, #1a1a1a, #222222);
+  border-radius: 20px;
+  padding: 32px;
+  width: 500px;
+  border: 1px solid transparent;
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.d::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, 
+             rgba(123, 97, 255, 0.15) 0%, 
+             transparent 70%);
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.d:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(123, 97, 255, 0.3);
+  border-color: rgba(123, 97, 255, 0.4);
+}
+
+.d:hover::before {
+  transform: scale(1);
+}
+
+.d ul {
+  padding-left: 0;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.d li {
+  color: #d1d1d1;
+  margin-bottom: 16px;
+  padding-left: 28px;
+  position: relative;
+  list-style-type: none;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: all 0.4s ease;
+}
+
+.d li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: #7B61FF;
+  border-radius: 50%;
+  transform: scale(0.6);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.d:hover li {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.d:hover li::before {
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(123, 97, 255, 0.5);
+}
+
+.d2 {
+  margin-top: 24px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.d:hover .d2 {
+  transform: translateY(-4px);
+}
+
+button{
+  background: linear-gradient(135deg, #7B61FF 0%, #5E3BFF 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(123, 97, 255, 0.3);
+  transition: all 0.3s ease;
+  
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 97, 255, 0.4);
+}
